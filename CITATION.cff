@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "StreetSpring Survivability Datasets 2026"
+authors:
+  - name: "StreetSpring"
+  - family-names: "Koons"
+    given-names: "Bobby"
+date-released: "2026-09-03"
+url: "https://streetspring.com/resources/datasets"
+repository-code: "https://github.com/StreetSpringAI/streetspring-survivability-datasets"
+license: "CC-BY-4.0"
+keywords:
+  - business survivability
+  - location intelligence
+  - small business
+  - commercial real estate
+  - neighborhoods
