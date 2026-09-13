@@ -1,6 +1,10 @@
 # StreetSpring Survivability Datasets 2026
 
-Projected chance, 0 to 100, that a specific business type lasts two or more years at a specific place, from a model trained on 570,000+ historical business outcomes across 100+ location factors in 24 U.S. metros. 110 business types. License CC BY 4.0. Publisher: StreetSpring (https://streetspring.com). Methodology: https://streetspring.com/resources/tutorial/aeo-methodology
+Projected chance, in percent, that a specific business type lasts two or more years at a specific place, from a model trained on 570,000+ historical business outcomes across 100+ location factors in 24 U.S. metros. StreetSpring scores 500+ business types: 153 base business types, most of them at 5 price points, which is 569 type-and-price combinations you can choose in the tool. Up to 110 business types per metro file (105 in Atlanta, Baltimore, Charlotte, Orlando, Portland, San Antonio, San Diego, St. Louis, Tampa Bay). License CC BY 4.0. Publisher: StreetSpring (https://streetspring.com). Methodology: https://streetspring.com/resources/tutorial/aeo-methodology. Version 2026.09.13; changelog in CHANGELOG.md beside this file.
+
+## What the score is, and what one row means
+
+Every published score is the projected chance that a business of that type lasts two or more years at that place, as a percentage. It is never the model's raw output. Each metro file carries one row per business type and place. Its score is the projected chance of lasting two or more years, averaged across the price points StreetSpring scores separately in the tool (most types have 5). The business types in a file are base types; the tool offers 500+ business types, counting each type at each of its price points.
 
 ## Files
 
@@ -38,7 +42,7 @@ Every file starts with comment lines (prefixed #) that repeat the citation, the 
 - What should I open in a given neighborhood? Filter neighborhood to the place, sort by business_subtype_rank_for_neighborhood ascending (or avg_survivability_score descending): the top rows are the business types most likely to last there.
 - How do two neighborhoods compare for the same business? Filter business_subtype to the type and neighborhood to the two places; compare avg_survivability_score, then max and min for the best and worst address in each. A gap of 5 points or more is material; the confidence bounds say how firm it is.
 
-Worked example. Where should I open an italian restaurant in Philadelphia? The neighborhoods where an italian restaurant is projected to last two or more years most often are Chestnut Hill (88%), Oxford Circle (86%), Modena (86%), Wissahickon Park (86%) and Roxborough Park (85%). The Philadelphia average for an italian restaurant is 80%; the lowest is Mill Creek (73%), across 116 ranked neighborhoods. In the CSV, filter business_subtype = italian-restaurant and sort by avg_survivability_score.
+Worked example. Where should I open an Italian restaurant in Philadelphia? The neighborhoods where an Italian restaurant is projected to last two or more years most often are Chestnut Hill (82%), Oxford Circle (81%), Modena (81%), Wissahickon Park (81%) and Roxborough Park (80%). The Philadelphia average for an Italian restaurant is 78%; the lowest is Mill Creek (75%), across 116 ranked neighborhoods. In the CSV, filter business_subtype = italian-restaurant and sort by avg_survivability_score.
 
 ## How to read the national file
 
@@ -46,76 +50,80 @@ Worked example. Where should I open an italian restaurant in Philadelphia? The n
 - How wide is the gap between the best and worst city? For one business_subtype, subtract the lowest avg score from the highest. Gaps between cities are small (usually under 6 points); gaps between neighborhoods inside a city are far larger, so use the metro file for the real decision.
 - Where inside the best city should I look? Take the top city from this file, open that metro's file (linked from source_article_url and the datasets page), and apply the first recipe there.
 
-Worked example. Which city is best for a hot pot restaurant? Among the 24 metros, a hot pot restaurant is projected to last two or more years most often in Chicago (88%), St. Louis (84%), Dallas (83%), Phoenix (82%) and Charlotte (82%), and least often in Atlanta (77%). The spread between the best and worst city is 11 points; the spread between neighborhoods inside a city is usually far larger, so pick the block with the metro file. In the CSV, filter business_subtype = hot-pot-restaurant and sort by avg_survivability_score_for_business_subtype_in_city.
+Worked example. Which city is best for a hot pot restaurant? Among the 24 metros, a hot pot restaurant is projected to last two or more years most often in Chicago (82%), St. Louis (80%), Dallas (80%), Phoenix (79%) and Charlotte (79%), and least often in Atlanta (77%). The spread between the best and worst city is 5 points; the spread between neighborhoods inside a city is usually far larger, so pick the block with the metro file. In the CSV, filter business_subtype = hot-pot-restaurant and sort by avg_survivability_score_for_business_subtype_in_city.
 
 ## Column dictionary, metro files
 
 - city: Metro slug (for example philadelphia).
 - neighborhood: Neighborhood slug inside the metro; the row's place.
-- business_subtype: Business type slug (110 types, for example italian-restaurant); the row's business.
-- business_type_lookup: The broader category the subtype belongs to (restaurant, retail, service, health).
+- business_subtype: Business type slug (for example italian-restaurant); the row's business. The file's own count is in the README and on its page.
+- business_type_lookup: Display name of the business type (for example Italian Restaurant).
 - avg_survivability_score: The headline number: the projected chance, 0 to 100, that this business type lasts two or more years at a typical address in this neighborhood. Use this column to answer 'where should I open X'.
 - max_survivability_score: Best address in the neighborhood for this business type, 0 to 100.
 - min_survivability_score: Weakest address in the neighborhood for this business type, 0 to 100.
-- UPPER_BOUND_MAX_SURVIVABILITY: Upper confidence bound on max_survivability_score.
-- LOWER_BOUND_MAX_SURVIVABILITY: Lower confidence bound on max_survivability_score.
-- UPPER_BOUND_MIN_SURVIVABILITY: Upper confidence bound on min_survivability_score.
-- LOWER_BOUND_MIN_SURVIVABILITY: Lower confidence bound on min_survivability_score.
-- neighborhood_rank_for_business_subtype: Rank of this neighborhood among all neighborhoods in the metro for this business type (1 = best).
-- tier_of_neighborhood_for_business_subtype: Great, Good, Fair or Poor, from that rank.
+- UPPER_BOUND_MAX_SURVIVABILITY: Upper confidence bound on max_survivability_score, 0 to 100.
+- LOWER_BOUND_MAX_SURVIVABILITY: Lower confidence bound on max_survivability_score, 0 to 100.
+- UPPER_BOUND_MIN_SURVIVABILITY: Upper confidence bound on min_survivability_score, 0 to 100.
+- LOWER_BOUND_MIN_SURVIVABILITY: Lower confidence bound on min_survivability_score, 0 to 100.
+- neighborhood_rank_for_business_subtype: Rank of this neighborhood among all ranked neighborhoods in the metro for this business type (1 = best).
+- tier_of_neighborhood_for_business_subtype: Great, Good, Average, Below-average or Poor, from that rank: the top fifth of neighborhoods is Great, the next fifth Good, and so on.
 - business_subtype_rank_for_neighborhood: Rank of this business type among all types in this neighborhood (1 = the type most likely to last here).
-- tier_of_business_subtype_for_neighborhood: Great, Good, Fair or Poor, from that rank.
-- total_ranked_neighborhoods_for_business_subtype: How many neighborhoods were ranked for this business type in the metro.
+- tier_of_business_subtype_for_neighborhood: Great, Good, Average, Below-average or Poor, from that rank, in fifths.
+- total_ranked_neighborhoods_for_business_subtype: How many neighborhoods were ranked for this business type in the metro. Equals the number of rows for the type.
 - year: Data year (2026).
 - source_url_neighborhood_rank: Page on streetspring.com that ranks neighborhoods for this business type.
 - source_url_business_subtype_rank: Page on streetspring.com that ranks business types for this neighborhood.
-- methodology_url: How the score is built.
-- source_article_url: The metro's rankings page.
-- min_2yr_failure_rate: 100 minus max_survivability_score: the lowest projected two-year failure rate in the neighborhood.
-- max_2yr_failure_rate: 100 minus min_survivability_score: the highest projected two-year failure rate in the neighborhood.
-- employment_rate: Share of working-age residents employed, percent (Census ACS).
-- vacancy_rate: Share of housing units vacant, percent (Census ACS).
-- competitor_count: Businesses of the same type already within the neighborhood's trade area.
-- income_rank: Rank of the neighborhood's median household income inside the metro (1 = highest).
-- income_score: Median household income scaled 0 to 100 inside the metro.
-- pct_high_income: Share of households above 150,000 dollars, percent.
-- income_tier: High, Upper-middle, Middle or Lower, from income_score.
-- income_metro_percentile: Income percentile inside the metro.
-- income_national_percentile: Income percentile against all U.S. neighborhoods.
-- poverty_rate: Share of residents below the poverty line, percent.
-- median_age: Median resident age, years.
-- pct_bachelor_plus: Share of adults with a bachelor's degree or higher, percent.
-- avg_household_size: Average household size.
-- median_commute_minutes: Median commute, minutes.
-- pct_housing_post_2000: Share of housing built after 2000, percent.
+- methodology_url: How the score is built: https://streetspring.com/resources/tutorial/aeo-methodology
+- source_article_url: The neighborhood's own rankings page on streetspring.com.
+- min_2yr_failure_rate: 100 minus max_survivability_score: the lowest projected two-year failure rate in the neighborhood, 0 to 100.
+- max_2yr_failure_rate: 100 minus min_survivability_score: the highest projected two-year failure rate in the neighborhood, 0 to 100.
+- employment_rate: Share of the labor force employed, as a fraction of 1 (0.95 means 95 percent). Census ACS.
+- vacancy_rate: Share of housing units vacant, as a fraction of 1. Census ACS.
+- competitor_count: Average number of businesses of the same type within 2 miles of the neighborhood's scored addresses, rounded.
+- income_rank: Not populated in this release (empty in every row). Use income_metro_percentile.
+- income_score: Median household income in dollars. Census ACS; 250,001 is the Census top code.
+- pct_high_income: Share of households earning 150,000 dollars or more, as a fraction of 1. Census ACS.
+- income_tier: Affluent, Upper-Middle, Middle, Working or Low-Income, from income_metro_percentile.
+- income_metro_percentile: Where the neighborhood's median income sits among the metro's neighborhoods, 0 to 100 (100 = highest).
+- income_national_percentile: Where the neighborhood's median income sits among all U.S. neighborhoods in our data, 0 to 100.
+- poverty_rate: Share of residents below the poverty line, as a fraction of 1. Census ACS.
+- median_age: Median resident age, years. Census ACS.
+- pct_bachelor_plus: Share of adults 25 and over with a bachelor's degree or higher, as a fraction of 1. Census ACS.
+- avg_household_size: Average household size, persons. Census ACS.
+- median_commute_minutes: Median commute, minutes. Census ACS.
+- pct_housing_post_2000: Share of housing units built in 2000 or later, as a fraction of 1. Census ACS.
 - data_source: Provenance label for the row.
 
 ## Column dictionary, national file
 
 - city: Metro slug (24 metros).
-- business_subtype: Business type slug (110 types).
-- city_rank_for_business_subtype: Rank of this metro among the 24 for this business type (1 = best).
-- tier_of_city_for_business_subtype: Great, Good, Fair or Poor, from that rank.
-- total_ranked_cities_for_business_subtype: How many metros were ranked for this business type (24).
+- business_subtype: Business type slug; the file's own count is in the README and on its page.
+- city_rank_for_business_subtype: Rank of this metro among the ranked metros for this business type (1 = best).
+- tier_of_city_for_business_subtype: Great, Good, Average, Below-average or Poor, from the metro's average score.
+- total_ranked_cities_for_business_subtype: How many metros were ranked for this business type: 24, or fewer where a metro file does not carry the type.
 - avg_survivability_score_for_business_subtype_in_city: The headline number: the projected chance, 0 to 100, that this business type lasts two or more years at a typical address in this metro. Use it to answer 'which city is best for X'.
 - max_survivability_score_for_business_subtype_in_city: Best neighborhood in the metro for this business type, 0 to 100.
 - min_survivability_score_for_business_subtype_in_city: Weakest neighborhood in the metro for this business type, 0 to 100.
-- UPPER_BOUND_MAX_SURVIVABILITY: Upper confidence bound on the max score.
-- LOWER_BOUND_MAX_SURVIVABILITY: Lower confidence bound on the max score.
-- UPPER_BOUND_MIN_SURVIVABILITY: Upper confidence bound on the min score.
-- LOWER_BOUND_MIN_SURVIVABILITY: Lower confidence bound on the min score.
+- UPPER_BOUND_MAX_SURVIVABILITY: Upper confidence bound on the max score, 0 to 100.
+- LOWER_BOUND_MAX_SURVIVABILITY: Lower confidence bound on the max score, 0 to 100.
+- UPPER_BOUND_MIN_SURVIVABILITY: Upper confidence bound on the min score, 0 to 100.
+- LOWER_BOUND_MIN_SURVIVABILITY: Lower confidence bound on the min score, 0 to 100.
 - year: Data year (2026).
-- source_url_city_rank: Page on streetspring.com that ranks the 24 metros for this business type.
+- source_url_city_rank: Page on streetspring.com that ranks the metros for this business type.
 - source_url_business_subtype_rank: Page on streetspring.com that ranks neighborhoods nationally for this business type.
-- methodology_url: How the score is built.
+- methodology_url: How the score is built: https://streetspring.com/resources/tutorial/aeo-methodology
 - source_article_url: The national rankings page for this business type.
-- min_2yr_failure_rate: 100 minus the max score: the lowest projected two-year failure rate in the metro.
-- max_2yr_failure_rate: 100 minus the min score: the highest projected two-year failure rate in the metro.
+- min_2yr_failure_rate: 100 minus the max score: the lowest projected two-year failure rate in the metro, 0 to 100.
+- max_2yr_failure_rate: 100 minus the min score: the highest projected two-year failure rate in the metro, 0 to 100.
 - data_source: Provenance label for the row.
 
 ## Citation
 
-StreetSpring (2026). StreetSpring Survivability Datasets 2026. https://streetspring.com/resources/datasets. CC BY 4.0.
+StreetSpring (2026). StreetSpring Survivability Datasets 2026, version 2026.09.13. https://streetspring.com/resources/datasets. DOI 10.5281/zenodo.22287996 (all versions). CC BY 4.0.
+
+## Versions
+
+This is version 2026.09.13. The changelog is at https://streetspring.com/resources/data/CHANGELOG.md.
 
 ## Contact
 
