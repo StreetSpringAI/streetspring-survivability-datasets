@@ -5,6 +5,7 @@ authors:
   - name: "StreetSpring"
   - family-names: "Koons"
     given-names: "Bobby"
+version: "2026.09.13"
 date-released: "2026-09-13"
 url: "https://streetspring.com/resources/datasets"
 repository-code: "https://github.com/StreetSpringAI/streetspring-survivability-datasets"
