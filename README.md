@@ -1,6 +1,6 @@
 # StreetSpring Survivability Datasets 2026
 
-Projected chance, in percent, that a specific business type lasts two or more years at a specific place, from a model trained on 570,000+ historical business outcomes across 100+ location factors in 24 U.S. metros. StreetSpring scores 500+ business types: 153 base business types, most of them at 5 price points, which is 569 type-and-price combinations you can choose in the tool. Up to 110 business types per metro file (105 in Atlanta, Baltimore, Charlotte, Orlando, Portland, San Antonio, San Diego, St. Louis, Tampa Bay). License CC BY 4.0. Publisher: StreetSpring (https://streetspring.com). Methodology: https://streetspring.com/resources/tutorial/aeo-methodology. Version 2026.09.13; changelog in CHANGELOG.md beside this file.
+Projected chance, in percent, that a specific business type lasts two or more years at a specific place, from a model trained on 570,000+ historical business outcomes across 100+ location factors in 24 U.S. metros. StreetSpring scores 500+ business types: 153 base business types, most of them at 5 price points, which is 569 type-and-price combinations you can choose in the tool. Up to 110 business types per metro file. License CC BY 4.0. Publisher: StreetSpring (https://streetspring.com). Methodology: https://streetspring.com/resources/tutorial/aeo-methodology. Version 2026.09.25; changelog in CHANGELOG.md beside this file.
 
 ## What the score is, and what one row means
 
@@ -9,48 +9,51 @@ Every published score is the projected chance that a business of that type lasts
 ## Files
 
 - national-survivability-scores-2026.csv: 2,595 rows, one per metro and business type; answers 'which city is best for X'. Page: https://streetspring.com/resources/datasets/national-survivability-scores-2026
-- atlanta-survivability-scores-2026.csv: Atlanta, GA; 3,255 rows, 31 neighborhoods, 105 business types; answers 'where should I open X in Atlanta'. Page: https://streetspring.com/resources/datasets/atlanta-survivability-scores-2026
-- baltimore-survivability-scores-2026.csv: Baltimore, MD; 2,415 rows, 23 neighborhoods, 105 business types; answers 'where should I open X in Baltimore'. Page: https://streetspring.com/resources/datasets/baltimore-survivability-scores-2026
-- boston-survivability-scores-2026.csv: Boston, MA; 9,680 rows, 88 neighborhoods, 110 business types; answers 'where should I open X in Boston'. Page: https://streetspring.com/resources/datasets/boston-survivability-scores-2026
-- charlotte-survivability-scores-2026.csv: Charlotte, NC; 3,675 rows, 35 neighborhoods, 105 business types; answers 'where should I open X in Charlotte'. Page: https://streetspring.com/resources/datasets/charlotte-survivability-scores-2026
-- chicago-survivability-scores-2026.csv: Chicago, IL; 9,460 rows, 86 neighborhoods, 110 business types; answers 'where should I open X in Chicago'. Page: https://streetspring.com/resources/datasets/chicago-survivability-scores-2026
-- dallas-survivability-scores-2026.csv: Dallas, TX; 3,300 rows, 30 neighborhoods, 110 business types; answers 'where should I open X in Dallas'. Page: https://streetspring.com/resources/datasets/dallas-survivability-scores-2026
-- denver-survivability-scores-2026.csv: Denver, CO; 220 rows, 2 neighborhoods, 110 business types; answers 'where should I open X in Denver'. Page: https://streetspring.com/resources/datasets/denver-survivability-scores-2026
-- detroit-survivability-scores-2026.csv: Detroit, MI; 4,510 rows, 41 neighborhoods, 110 business types; answers 'where should I open X in Detroit'. Page: https://streetspring.com/resources/datasets/detroit-survivability-scores-2026
-- houston-survivability-scores-2026.csv: Houston, TX; 6,930 rows, 63 neighborhoods, 110 business types; answers 'where should I open X in Houston'. Page: https://streetspring.com/resources/datasets/houston-survivability-scores-2026
-- los-angeles-survivability-scores-2026.csv: Los Angeles, CA; 17,710 rows, 161 neighborhoods, 110 business types; answers 'where should I open X in Los Angeles'. Page: https://streetspring.com/resources/datasets/los-angeles-survivability-scores-2026
-- miami-survivability-scores-2026.csv: Miami, FL; 9,350 rows, 85 neighborhoods, 110 business types; answers 'where should I open X in Miami'. Page: https://streetspring.com/resources/datasets/miami-survivability-scores-2026
-- minneapolis-survivability-scores-2026.csv: Minneapolis, MN; 5,500 rows, 50 neighborhoods, 110 business types; answers 'where should I open X in Minneapolis'. Page: https://streetspring.com/resources/datasets/minneapolis-survivability-scores-2026
-- new-york-city-survivability-scores-2026.csv: New York City, NY; 18,590 rows, 169 neighborhoods, 110 business types; answers 'where should I open X in New York City'. Page: https://streetspring.com/resources/datasets/new-york-city-survivability-scores-2026
-- orlando-survivability-scores-2026.csv: Orlando, FL; 3,465 rows, 33 neighborhoods, 105 business types; answers 'where should I open X in Orlando'. Page: https://streetspring.com/resources/datasets/orlando-survivability-scores-2026
-- philadelphia-survivability-scores-2026.csv: Philadelphia, PA; 12,760 rows, 116 neighborhoods, 110 business types; answers 'where should I open X in Philadelphia'. Page: https://streetspring.com/resources/datasets/philadelphia-survivability-scores-2026
-- phoenix-survivability-scores-2026.csv: Phoenix, AZ; 1,980 rows, 18 neighborhoods, 110 business types; answers 'where should I open X in Phoenix'. Page: https://streetspring.com/resources/datasets/phoenix-survivability-scores-2026
-- portland-survivability-scores-2026.csv: Portland, OR; 4,515 rows, 43 neighborhoods, 105 business types; answers 'where should I open X in Portland'. Page: https://streetspring.com/resources/datasets/portland-survivability-scores-2026
-- san-antonio-survivability-scores-2026.csv: San Antonio, TX; 1,260 rows, 12 neighborhoods, 105 business types; answers 'where should I open X in San Antonio'. Page: https://streetspring.com/resources/datasets/san-antonio-survivability-scores-2026
-- san-diego-survivability-scores-2026.csv: San Diego, CA; 5,040 rows, 48 neighborhoods, 105 business types; answers 'where should I open X in San Diego'. Page: https://streetspring.com/resources/datasets/san-diego-survivability-scores-2026
-- san-francisco-survivability-scores-2026.csv: San Francisco, CA; 8,910 rows, 81 neighborhoods, 110 business types; answers 'where should I open X in San Francisco'. Page: https://streetspring.com/resources/datasets/san-francisco-survivability-scores-2026
-- seattle-survivability-scores-2026.csv: Seattle, WA; 7,040 rows, 64 neighborhoods, 110 business types; answers 'where should I open X in Seattle'. Page: https://streetspring.com/resources/datasets/seattle-survivability-scores-2026
-- st-louis-survivability-scores-2026.csv: St. Louis, MO; 3,465 rows, 33 neighborhoods, 105 business types; answers 'where should I open X in St. Louis'. Page: https://streetspring.com/resources/datasets/st-louis-survivability-scores-2026
-- tampa-bay-survivability-scores-2026.csv: Tampa Bay, FL; 3,255 rows, 31 neighborhoods, 105 business types; answers 'where should I open X in Tampa Bay'. Page: https://streetspring.com/resources/datasets/tampa-bay-survivability-scores-2026
-- washington-dc-survivability-scores-2026.csv: Washington DC, DC; 9,130 rows, 83 neighborhoods, 110 business types; answers 'where should I open X in Washington DC'. Page: https://streetspring.com/resources/datasets/washington-dc-survivability-scores-2026
+- atlanta-survivability-scores-2026.csv: Atlanta, GA; 28,296 rows, 266 neighborhoods, 110 business types; answers 'where should I open X in Atlanta'. Page: https://streetspring.com/resources/datasets/atlanta-survivability-scores-2026
+- baltimore-survivability-scores-2026.csv: Baltimore, MD; 29,332 rows, 276 neighborhoods, 110 business types; answers 'where should I open X in Baltimore'. Page: https://streetspring.com/resources/datasets/baltimore-survivability-scores-2026
+- boston-survivability-scores-2026.csv: Boston, MA; 14,096 rows, 130 neighborhoods, 110 business types; answers 'where should I open X in Boston'. Page: https://streetspring.com/resources/datasets/boston-survivability-scores-2026
+- charlotte-survivability-scores-2026.csv: Charlotte, NC; 10,308 rows, 96 neighborhoods, 110 business types; answers 'where should I open X in Charlotte'. Page: https://streetspring.com/resources/datasets/charlotte-survivability-scores-2026
+- chicago-survivability-scores-2026.csv: Chicago, IL; 17,924 rows, 166 neighborhoods, 110 business types; answers 'where should I open X in Chicago'. Page: https://streetspring.com/resources/datasets/chicago-survivability-scores-2026
+- dallas-survivability-scores-2026.csv: Dallas, TX; 8,466 rows, 79 neighborhoods, 110 business types; answers 'where should I open X in Dallas'. Page: https://streetspring.com/resources/datasets/dallas-survivability-scores-2026
+- denver-survivability-scores-2026.csv: Denver, CO; 22,904 rows, 216 neighborhoods, 110 business types; answers 'where should I open X in Denver'. Page: https://streetspring.com/resources/datasets/denver-survivability-scores-2026
+- detroit-survivability-scores-2026.csv: Detroit, MI; 25,160 rows, 236 neighborhoods, 110 business types; answers 'where should I open X in Detroit'. Page: https://streetspring.com/resources/datasets/detroit-survivability-scores-2026
+- houston-survivability-scores-2026.csv: Houston, TX; 9,332 rows, 86 neighborhoods, 110 business types; answers 'where should I open X in Houston'. Page: https://streetspring.com/resources/datasets/houston-survivability-scores-2026
+- los-angeles-survivability-scores-2026.csv: Los Angeles, CA; 25,708 rows, 238 neighborhoods, 110 business types; answers 'where should I open X in Los Angeles'. Page: https://streetspring.com/resources/datasets/los-angeles-survivability-scores-2026
+- miami-survivability-scores-2026.csv: Miami, FL; 18,366 rows, 171 neighborhoods, 110 business types; answers 'where should I open X in Miami'. Page: https://streetspring.com/resources/datasets/miami-survivability-scores-2026
+- minneapolis-survivability-scores-2026.csv: Minneapolis, MN; 10,796 rows, 100 neighborhoods, 110 business types; answers 'where should I open X in Minneapolis'. Page: https://streetspring.com/resources/datasets/minneapolis-survivability-scores-2026
+- new-york-city-survivability-scores-2026.csv: New York City, NY; 20,902 rows, 191 neighborhoods, 110 business types; answers 'where should I open X in New York City'. Page: https://streetspring.com/resources/datasets/new-york-city-survivability-scores-2026
+- orlando-survivability-scores-2026.csv: Orlando, FL; 7,854 rows, 73 neighborhoods, 110 business types; answers 'where should I open X in Orlando'. Page: https://streetspring.com/resources/datasets/orlando-survivability-scores-2026
+- philadelphia-survivability-scores-2026.csv: Philadelphia, PA; 15,712 rows, 144 neighborhoods, 110 business types; answers 'where should I open X in Philadelphia'. Page: https://streetspring.com/resources/datasets/philadelphia-survivability-scores-2026
+- phoenix-survivability-scores-2026.csv: Phoenix, AZ; 10,216 rows, 96 neighborhoods, 110 business types; answers 'where should I open X in Phoenix'. Page: https://streetspring.com/resources/datasets/phoenix-survivability-scores-2026
+- portland-survivability-scores-2026.csv: Portland, OR; 8,400 rows, 78 neighborhoods, 110 business types; answers 'where should I open X in Portland'. Page: https://streetspring.com/resources/datasets/portland-survivability-scores-2026
+- san-antonio-survivability-scores-2026.csv: San Antonio, TX; 5,866 rows, 55 neighborhoods, 110 business types; answers 'where should I open X in San Antonio'. Page: https://streetspring.com/resources/datasets/san-antonio-survivability-scores-2026
+- san-diego-survivability-scores-2026.csv: San Diego, CA; 13,810 rows, 129 neighborhoods, 110 business types; answers 'where should I open X in San Diego'. Page: https://streetspring.com/resources/datasets/san-diego-survivability-scores-2026
+- san-francisco-survivability-scores-2026.csv: San Francisco, CA; 23,160 rows, 216 neighborhoods, 110 business types; answers 'where should I open X in San Francisco'. Page: https://streetspring.com/resources/datasets/san-francisco-survivability-scores-2026
+- seattle-survivability-scores-2026.csv: Seattle, WA; 14,346 rows, 133 neighborhoods, 110 business types; answers 'where should I open X in Seattle'. Page: https://streetspring.com/resources/datasets/seattle-survivability-scores-2026
+- st-louis-survivability-scores-2026.csv: St. Louis, MO; 16,024 rows, 150 neighborhoods, 110 business types; answers 'where should I open X in St. Louis'. Page: https://streetspring.com/resources/datasets/st-louis-survivability-scores-2026
+- tampa-bay-survivability-scores-2026.csv: Tampa Bay, FL; 3,810 rows, 35 neighborhoods, 110 business types; answers 'where should I open X in Tampa Bay'. Page: https://streetspring.com/resources/datasets/tampa-bay-survivability-scores-2026
+- washington-dc-survivability-scores-2026.csv: Washington DC, DC; 16,632 rows, 154 neighborhoods, 110 business types; answers 'where should I open X in Washington DC'. Page: https://streetspring.com/resources/datasets/washington-dc-survivability-scores-2026
 
 Every file starts with comment lines (prefixed #) that repeat the citation, the license, the recipes and a link to this README. Skip lines beginning with # when parsing.
 
 ## How to read a metro file
 
-- Where should I open a given business in this metro? Filter business_subtype to the type (for example italian-restaurant), sort by avg_survivability_score descending, read the top rows: those neighborhoods are where that business is projected to last two or more years most often. neighborhood_rank_for_business_subtype gives the same order as a number.
-- What should I open in a given neighborhood? Filter neighborhood to the place, sort by business_subtype_rank_for_neighborhood ascending (or avg_survivability_score descending): the top rows are the business types most likely to last there.
-- How do two neighborhoods compare for the same business? Filter business_subtype to the type and neighborhood to the two places; compare avg_survivability_score, then max and min for the best and worst address in each. A gap of 5 points or more is material; the confidence bounds say how firm it is.
+- Not every business type is ranked: the rank, tier and overall columns cover the business types StreetSpring publishes guides for. The other scored types keep their scores with empty rank columns, so a page and this file never disagree about which type ranks first.
 
-Worked example. Where should I open an Italian restaurant in Philadelphia? The neighborhoods where an Italian restaurant is projected to last two or more years most often are Chestnut Hill (82%), Oxford Circle (81%), Modena (81%), Wissahickon Park (81%) and Roxborough Park (80%). The Philadelphia average for an Italian restaurant is 78%; the lowest is Mill Creek (75%), across 116 ranked neighborhoods. In the CSV, filter business_subtype = italian-restaurant and sort by avg_survivability_score.
+- Where should I open a given business in this metro? Filter business_subtype to the type and place_kind to neighborhood (or town), sort by neighborhood_rank_for_business_subtype ascending. The ranking is on p90_survivability_score, the chance of lasting two or more years at a good address; avg_survivability_score is the typical address.
+- What should I open in a given neighborhood? Filter neighborhood to the place, sort by business_subtype_rank_for_neighborhood ascending: the top rows are the business types most likely to last there.
+- How do two neighborhoods compare for the same business? Filter business_subtype to the type and neighborhood to the two places (same place_kind); compare p90_survivability_score for the best-address view and avg_survivability_score for the typical address.
+- Which neighborhoods are strongest overall? Filter place_kind to neighborhood, keep one row per neighborhood, sort by neighborhood_overall_rank ascending. neighborhood_overall_score is the mean p90 of the place's ranked business types.
+
+Worked example. Where should I open an Italian restaurant in Philadelphia? The neighborhoods where an Italian restaurant is projected to last two or more years at a good address most often are Germany Hill (84%), Stockton (83%), Tacony (83%), Holmesburg (83%) and Roxborough Park (83%). At a typical address an Italian restaurant averages 78% across the 129 ranked neighborhoods; the lowest-ranked is Stanton (74% at a good address). In the CSV, filter business_subtype = italian-restaurant and place_kind = neighborhood, and sort by neighborhood_rank_for_business_subtype.
 
 ## How to read the national file
 
-- Which city is best for a given business? Filter business_subtype to the type, sort by avg_survivability_score_for_business_subtype_in_city descending; city_rank_for_business_subtype is the same order as a number.
+- Which city is best for a given business? Filter business_subtype to the type, sort by city_rank_for_business_subtype ascending. The ranking is on p90_survivability_score_for_business_subtype_in_city, the chance of lasting two or more years at a good address; the avg column is the typical address.
 - How wide is the gap between the best and worst city? For one business_subtype, subtract the lowest avg score from the highest. Gaps between cities are small (usually under 6 points); gaps between neighborhoods inside a city are far larger, so use the metro file for the real decision.
 - Where inside the best city should I look? Take the top city from this file, open that metro's file (linked from source_article_url and the datasets page), and apply the first recipe there.
 
-Worked example. Which city is best for a hot pot restaurant? Among the 24 metros, a hot pot restaurant is projected to last two or more years most often in Chicago (82%), St. Louis (80%), Dallas (80%), Phoenix (79%) and Charlotte (79%), and least often in Atlanta (77%). The spread between the best and worst city is 5 points; the spread between neighborhoods inside a city is usually far larger, so pick the block with the metro file. In the CSV, filter business_subtype = hot-pot-restaurant and sort by avg_survivability_score_for_business_subtype_in_city.
+Worked example. Which city is best for a hot pot restaurant? Among the 24 metros, a hot pot restaurant is projected to last two or more years at a good address most often in St. Louis (84%), Tampa Bay (84%), Phoenix (84%), Portland (84%) and San Antonio (84%), and least often in Chicago (80%). The spread between the best and worst city is 5 points; the spread between neighborhoods inside a city is usually far larger, so pick the block with the metro file. In the CSV, filter business_subtype = hot-pot-restaurant and sort by city_rank_for_business_subtype.
 
 ## Column dictionary, metro files
 
@@ -79,7 +82,7 @@ Worked example. Which city is best for a hot pot restaurant? Among the 24 metros
 - max_2yr_failure_rate: 100 minus min_survivability_score: the highest projected two-year failure rate in the neighborhood, 0 to 100.
 - employment_rate: Share of the labor force employed, as a fraction of 1 (0.95 means 95 percent). Census ACS.
 - vacancy_rate: Share of housing units vacant, as a fraction of 1. Census ACS.
-- competitor_count: Average number of businesses of the same type within 2 miles of the neighborhood's scored addresses, rounded.
+- competitor_count: Number of businesses of that exact type located INSIDE the neighborhood boundary, counted as distinct places. An empty cell means not measured, which is not the same as none: either the neighborhood has no boundary in our polygon set or that business type was never collected in that metro. A 0 means we measured and found none.
 - income_rank: Not populated in this release (empty in every row). Use income_metro_percentile.
 - income_score: Median household income in dollars. Census ACS; 250,001 is the Census top code.
 - pct_high_income: Share of households earning 150,000 dollars or more, as a fraction of 1. Census ACS.
@@ -93,6 +96,17 @@ Worked example. Which city is best for a hot pot restaurant? Among the 24 metros
 - median_commute_minutes: Median commute, minutes. Census ACS.
 - pct_housing_post_2000: Share of housing units built in 2000 or later, as a fraction of 1. Census ACS.
 - data_source: Provenance label for the row.
+- p90_survivability_score: The chance, 0 to 100, that this business type lasts two or more years at a good address in the place: the 90th percentile of the scored locations inside it. The rank columns are ordered on this.
+- neighborhood_name: Display name of the place.
+- scored_locations_in_neighborhood: How many scored locations the place's scores are built from. A place needs at least 10 to be ranked.
+- place_kind: neighborhood (a city neighbourhood) or town (a whole municipality). Rankings never mix the two.
+- neighborhood_overall_score: Mean p90_survivability_score across the place's ranked business types, 0 to 100; the basis of the overall rank.
+- neighborhood_overall_avg_score: Mean avg_survivability_score across the same rows.
+- neighborhood_overall_max_score: Mean max_survivability_score across the same rows.
+- neighborhood_overall_min_score: Mean min_survivability_score across the same rows.
+- business_types_ranked_in_neighborhood: How many business types are ranked in the place.
+- neighborhood_overall_rank: The place's rank among places of the same kind on neighborhood_overall_score (1 = best), repeated on every row of the place.
+- total_ranked_neighborhoods_overall: How many places of that kind carry an overall rank in the metro.
 
 ## Column dictionary, national file
 
@@ -116,14 +130,16 @@ Worked example. Which city is best for a hot pot restaurant? Among the 24 metros
 - min_2yr_failure_rate: 100 minus the max score: the lowest projected two-year failure rate in the metro, 0 to 100.
 - max_2yr_failure_rate: 100 minus the min score: the highest projected two-year failure rate in the metro, 0 to 100.
 - data_source: Provenance label for the row.
+- p90_survivability_score_for_business_subtype_in_city: The chance, 0 to 100, that this business type lasts two or more years at a good address in the metro (90th percentile of its scored locations). city_rank_for_business_subtype is ordered on this.
+- scored_locations_in_city: How many scored locations the metro's figures are built from.
 
 ## Citation
 
-StreetSpring (2026). StreetSpring Survivability Datasets 2026, version 2026.09.13. https://streetspring.com/resources/datasets. DOI 10.5281/zenodo.22287996 (all versions). CC BY 4.0.
+StreetSpring (2026). StreetSpring Survivability Datasets 2026, version 2026.09.25. https://streetspring.com/resources/datasets. DOI 10.5281/zenodo.22287996 (all versions). CC BY 4.0.
 
 ## Versions
 
-This is version 2026.09.13. The changelog is at https://streetspring.com/resources/data/CHANGELOG.md.
+This is version 2026.09.25. The changelog is at https://streetspring.com/resources/data/CHANGELOG.md.
 
 ## Contact
 
