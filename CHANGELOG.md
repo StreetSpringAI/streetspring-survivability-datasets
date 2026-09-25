@@ -2,6 +2,15 @@
 
 Versions are dated. A version changes when any file, header, README or page sentence changes; score changes are called out explicitly.
 
+## 2026.09.25.1
+
+- Same-day correction of 2026.09.25, released under its own version so a citation of either is unambiguous. 2026.09.25 (380,015 rows) stays available as its own Zenodo version.
+- SCORES ADDED for bar, home-improvement-store, irish-pub and middle-eastern-restaurant. Until this version their rows kept April scores with an empty p90_survivability_score in every metro file and in the national file, because the calibration from the model's raw output to the two-year percentage had never been recovered for them. They now carry the same good-address and typical-address scores as every other type, every scored place is included (3,514 rows each across the 24 metro files, up from 1,234), and they are ranked. Other business types' scores are unchanged; their rank among the business types in a place, and each place's overall rank, move where these four enter the ranking.
+- scored_locations_in_city in the national file now counts distinct scored locations. For the business types scored at 5 price points it counted each location once per price point, five times too many (Chicago afghan-restaurant 20,955, now 4,191). Scores and ranks did not change.
+- New columns in the national file: city_overall_score, city_overall_avg_score, city_overall_rank, total_ranked_cities_overall and business_types_in_city_overall, one value per metro repeated on each of its rows, so every page reads the same overall metro rank.
+- Column dictionary corrected: the ranks and tiers follow the good-address score (p90), and the tiers are cut at 10, 30, 70 and 90 percent of the list, not in fifths. The national header recipe now sorts by the rank, not by the average.
+- Files: 24 metro files and one national file; 389,135 rows in total.
+
 ## 2026.09.25
 
 - Rankings follow p90_survivability_score, the chance of lasting two or more years at a good address; avg_survivability_score is the typical address. Pages order their lists on the same column.
@@ -9,7 +18,7 @@ Versions are dated. A version changes when any file, header, README or page sent
 - Rank columns cover the business types StreetSpring publishes guides for; other scored types keep their scores with empty ranks.
 - Geography: 1,317 neighborhoods added from city and county boundary files; place names audited metro by metro. Non-places (parks, airports, industrial parks, planning-area codes, owners' associations) removed from the public files; 358 names corrected (separators, capitals, spellings). URLs are unchanged.
 - Column renamed: grid_points_in_neighborhood is now scored_locations_in_neighborhood, and grid_points_in_city is now scored_locations_in_city. Values unchanged. One unnamed San Diego place removed from the public file.
-- Files: 24 metro files and one national file; 380,121 rows in total.
+- Files: 24 metro files and one national file; 380,015 rows in total.
 
 ## 2026.09.13
 
