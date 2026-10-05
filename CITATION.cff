@@ -5,8 +5,13 @@ authors:
   - name: "StreetSpring"
   - family-names: "Koons"
     given-names: "Robert"
-version: "2026.09.25.1"
-date-released: "2026-09-25"
+version: "2026.10.04"
+date-released: "2026-10-04"
+doi: "10.5281/zenodo.22287996"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22287996"
+    description: "Concept DOI, always resolves to the newest version"
 url: "https://streetspring.com/resources/datasets"
 repository-code: "https://github.com/StreetSpringAI/streetspring-survivability-datasets"
 license: "CC-BY-4.0"
@@ -16,3 +21,4 @@ keywords:
   - small business
   - commercial real estate
   - neighborhoods
+type: dataset

@@ -2,6 +2,19 @@
 
 Versions are dated. A version changes when any file, header, README or page sentence changes; score changes are called out explicitly.
 
+## 2026.10.04
+
+- Scores are now produced by model v2-2026-08-22, replacing v1-2026-03-12. Every metro was rescored on one competitor registry vintage (the 2026-07-03 snapshot) so no metro's score depends on when its registry was last refreshed.
+- Houston and Phoenix were rescored. Their previous files were unreadable from row group 794 of 918 and had never been converted to the published scale, so the earlier release described 22 metros rather than 24.
+- All 24 metros were reconverted together. The two-year percentile maps are national, so correcting Houston and Phoenix changes the displayed score for every metro. This release supersedes the previous one for all 24, not only for the two.
+- Published business types rise from 110 to 146, and rows from 389,135 to 516,548. The additional types were already scored by the model and are now carried in the published files.
+- The gap between the strongest and weakest neighborhood inside a city is materially wider than in the previous release. The median city spread moves from about 5 points to about 21 points of two-year survival chance. The scores now use the full published 13 to 93 axis per business type, where the previous release was compressed; the ordering of places is substantially unchanged.
+- Every row now carries a citation block: publisher, publisher_url, dataset_name, dataset_version, dataset_doi, as_of_date, license and license_url. A single row read on its own is now enough to attribute, pin the version and honour the license. dataset_doi is the concept DOI, which always resolves to the newest version.
+- source_url_business_type is new and carries an absolute, verified link to the business type ranking page. It is empty where the page was not proven to exist, never a guess.
+- source_url is present and deliberately empty in every row of this release. It can only be filled for about a third of rows until the remaining place pages are built, and a partly filled citation column is less useful than an absent one. It will be filled in a later release.
+- Dallas and San Antonio remain held: their numbers are withheld from press and ranking surfaces. Pacific Palisades in Los Angeles keeps its scores and is excluded from rankings, because its inputs predate the January 2025 fire.
+- Files: 24 metro files and one national file; 516,548 rows in total.
+
 ## 2026.09.25.1
 
 - Same-day correction of 2026.09.25, released under its own version so a citation of either is unambiguous. 2026.09.25 (380,015 rows) stays available as its own Zenodo version.
