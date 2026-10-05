@@ -2,17 +2,30 @@
 
 Versions are dated. A version changes when any file, header, README or page sentence changes; score changes are called out explicitly.
 
+## 2026.10.05
+
+- This release corrects 2026.10.04. No score changed: every score column in the 24 metro files and the national file carries the same value as in 2026.10.04.
+- Dallas and San Antonio are now held out of every comparison in the national file. Their rows keep every score; the comparison columns (city rank, tier, list size and city overall) are left empty for them, and every list is numbered over the metros that are compared. 2026.10.04 still compared both.
+- Ranks, counts and the year in the national file print as whole numbers (5, not 5.0).
+- data_source and the Citation line in every file header use the dataset's name, StreetSpring Survivability Datasets 2026.
+- The national file's Recipe 2 header now states the gap between cities as measured from the files on every build, replacing "usually under 6 points", which was false for 2026.10.04.
+- The 2026.10.04 entry below was corrected; its Correction bullet says what changed and why.
+- Files: 24 metro files and one national file; 516,548 rows in total.
+
 ## 2026.10.04
 
 - Scores are now produced by model v2-2026-08-22, replacing v1-2026-03-12. Every metro was rescored on one competitor registry vintage (the 2026-07-03 snapshot) so no metro's score depends on when its registry was last refreshed.
-- Houston and Phoenix were rescored. Their previous files were unreadable from row group 794 of 918 and had never been converted to the published scale, so the earlier release described 22 metros rather than 24.
-- All 24 metros were reconverted together. The two-year percentile maps are national, so correcting Houston and Phoenix changes the displayed score for every metro. This release supersedes the previous one for all 24, not only for the two.
+- All 24 metros were converted to the two-year percentage together, through national percentile maps (one per business type), so every metro's displayed score changed. This release supersedes the previous one for all 24 metros.
 - Published business types rise from 110 to 146, and rows from 389,135 to 516,548. The additional types were already scored by the model and are now carried in the published files.
-- The gap between the strongest and weakest neighborhood inside a city is materially wider than in the previous release. The median city spread moves from about 5 points to about 21 points of two-year survival chance. The scores now use the full published 13 to 93 axis per business type, where the previous release was compressed; the ordering of places is substantially unchanged.
+- Scores spread much more widely inside a city. For one business type in one metro, the gap between the highest and lowest ranked neighborhood at a good address (p90_survivability_score) has a median of 22.6 points, against 7.6 in 2026.09.25.1. The comparison covers 2,046 type-and-metro pairs: each business type ranked by both releases in at least five of the same neighborhoods, in the 22 metros that rank neighborhoods and are not held.
+- Scores in the metro files run from 48.0 to 90.0. For one business type, the typical-address score (avg_survivability_score) spans a median of 36.0 points across the metro files, against 12.7 in 2026.09.25.1.
+- The order of places changed. Over those 2,046 pairs the median rank correlation between the two releases is 0.04; the top-ranked neighborhood for a business type is the same in 120 of them (6%), and the overall number one neighborhood is the same in 2 of 22 metros. Read these rankings as new, not as an update of the previous ones.
 - Every row now carries a citation block: publisher, publisher_url, dataset_name, dataset_version, dataset_doi, as_of_date, license and license_url. A single row read on its own is now enough to attribute, pin the version and honour the license. dataset_doi is the concept DOI, which always resolves to the newest version.
 - source_url_business_type is new and carries an absolute, verified link to the business type ranking page. It is empty where the page was not proven to exist, never a guess.
 - source_url is present and deliberately empty in every row of this release. It can only be filled for about a third of rows until the remaining place pages are built, and a partly filled citation column is less useful than an absent one. It will be filled in a later release.
-- Dallas and San Antonio remain held: their numbers are withheld from press and ranking surfaces. Pacific Palisades in Los Angeles keeps its scores and is excluded from rankings, because its inputs predate the January 2025 fire.
+- rank_withheld_reason is new in the metro files. It is filled on the 1,022 rows of the 7 places that keep their scores and are deliberately left out of every ranking, and says why. A place left unranked for any other reason carries it empty.
+- Dallas and San Antonio remain held. Their metro files carry every row and score, and dallas-survivability-scores-2026.csv also keeps its neighborhood and town ranks; the dataset pages and the README name no neighborhood, rank or score for them. This release's national file still gives them city ranks (city_rank_for_business_subtype and city_overall_rank), which the dataset pages leave out of every comparison. Pacific Palisades in Los Angeles keeps its scores and is excluded from rankings, because its inputs predate the January 2025 fire.
+- Correction (2026-10-05): this entry was revised after publication because the files do not support three of its statements: the score axis, the ordering of places, and the history of the Houston and Phoenix files. The wider spread between neighborhoods is now stated with its measure, the statement about Dallas and San Antonio was made exact, and rank_withheld_reason is now listed. The bullets above say what the files hold.
 - Files: 24 metro files and one national file; 516,548 rows in total.
 
 ## 2026.09.25.1

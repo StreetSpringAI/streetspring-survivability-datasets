@@ -5,8 +5,8 @@ authors:
   - name: "StreetSpring"
   - family-names: "Koons"
     given-names: "Robert"
-version: "2026.10.04"
-date-released: "2026-10-04"
+version: "2026.10.05"
+date-released: "2026-10-05"
 doi: "10.5281/zenodo.22287996"
 identifiers:
   - type: doi
