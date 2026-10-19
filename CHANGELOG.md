@@ -2,6 +2,14 @@
 
 Versions are dated. A version changes when any file, header, README or page sentence changes; score changes are called out explicitly.
 
+## 2026.10.18
+
+- San Antonio is ranked again. Its neighbourhood ranking was withheld on 2026-09-21 when 11 places were published and none met the ranking floor. It now publishes 55 places, of which 14 clear the 10 scored-location floor and 12 clear the 5-peer rule, so 12 neighbourhoods carry a rank and 1,752 rows carry rank columns.
+- Dallas is ranked again. The census inputs that held it were repaired on 2026-09-25: its worst census column reads 8.16 percent empty against 98.43 percent before, which makes Dallas one of the best covered metros in the set.
+- The national file now ranks all 24 metros. It ranked 22 while Dallas and San Antonio were held, and both now carry 146 ranked rows each.
+- The metro and national ranking pages for Dallas and San Antonio were regenerated, so they print figures instead of a hold notice.
+- Files: 24 metro files and one national file; 516,548 rows in total.
+
 ## 2026.10.05
 
 - This release corrects 2026.10.04. No score changed: every score column in the 24 metro files and the national file carries the same value as in 2026.10.04.

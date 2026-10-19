@@ -1,6 +1,6 @@
 # StreetSpring Survivability Datasets 2026
 
-Projected chance, in percent, that a specific business type lasts two or more years at a specific place, from a model trained on 570,000+ historical business outcomes across 100+ location factors in 24 U.S. metros. StreetSpring scores 500+ business types: 153 base business types, most of them at 5 price points, which is 569 type-and-price combinations you can choose in the tool. Up to 146 business types per metro file. License CC BY 4.0. Publisher: StreetSpring (https://streetspring.com). Methodology: https://streetspring.com/resources/tutorial/aeo-methodology. Version 2026.10.05; changelog in CHANGELOG.md beside this file.
+Projected chance, in percent, that a specific business type lasts two or more years at a specific place, from a model trained on 570,000+ historical business outcomes across 100+ location factors in 24 U.S. metros. StreetSpring scores 500+ business types: 153 base business types, most of them at 5 price points, which is 569 type-and-price combinations you can choose in the tool. Up to 146 business types per metro file. License CC BY 4.0. Publisher: StreetSpring (https://streetspring.com). Methodology: https://streetspring.com/resources/tutorial/aeo-methodology. Version 2026.10.18; changelog in CHANGELOG.md beside this file.
 
 ## What the score is, and what one row means
 
@@ -50,11 +50,11 @@ Worked example. Where should I open an Italian restaurant in Philadelphia? The n
 ## How to read the national file
 
 - Which city is best for a given business? Filter business_subtype to the type, sort by city_rank_for_business_subtype ascending. The ranking is on p90_survivability_score_for_business_subtype_in_city, the chance of lasting two or more years at a good address; the avg column is the typical address.
-- How wide is the gap between the best and worst city? For one business_subtype, subtract the lowest avg score among the ranked metros from the highest. In this file that gap runs from 8.0 to 19.7 points across the 146 business types, with a median of 12.4. Inside one metro, the gap between the best and worst ranked neighborhood for one business type has a median of 24.3 points, so use the metro file for the real decision.
+- How wide is the gap between the best and worst city? For one business_subtype, subtract the lowest avg score among the ranked metros from the highest. In this file that gap runs from 8.0 to 19.7 points across the 146 business types, with a median of 12.4. Inside one metro, the gap between the best and worst ranked neighborhood for one business type has a median of 24.1 points, so use the metro file for the real decision.
 - Where inside the best city should I look? Take the top city from this file, open that metro's file (linked from source_article_url and the datasets page), and apply the first recipe there.
 - Which metro is strongest overall? Keep one row per city and sort by city_overall_rank ascending. city_overall_score is the mean good-address score across the business types every metro carries; city_overall_avg_score is the typical address.
 
-Worked example. Which city is best for a hot pot restaurant? Among the 22 metros compared here (Dallas and San Antonio are held out of the comparison), a hot pot restaurant is projected to last two or more years at a good address most often in Charlotte (83%), Atlanta (83%), Orlando (83%), Denver (83%) and Houston (83%), and least often in New York City (76%). The spread between the best and worst city at a good address is 7 points; the spread between neighborhoods inside a city is usually far larger, so pick the block with the metro file. In the CSV, filter business_subtype = hot-pot-restaurant and sort by city_rank_for_business_subtype.
+Worked example. Which city is best for a hot pot restaurant? Among the 24 metros compared here, a hot pot restaurant is projected to last two or more years at a good address most often in Charlotte (83%), San Antonio (83%), Dallas (83%), Atlanta (83%) and Orlando (83%), and least often in New York City (76%). The spread between the best and worst city at a good address is 7 points; the spread between neighborhoods inside a city is usually far larger, so pick the block with the metro file. In the CSV, filter business_subtype = hot-pot-restaurant and sort by city_rank_for_business_subtype.
 
 ## Column dictionary, metro files
 
@@ -124,9 +124,9 @@ Worked example. Which city is best for a hot pot restaurant? Among the 22 metros
 
 - city: Metro slug (24 metros).
 - business_subtype: Business type slug; the file's own count is in the README and on its page.
-- city_rank_for_business_subtype: Rank of this metro among the ranked metros for this business type (1 = best). Empty for a held metro.
+- city_rank_for_business_subtype: Rank of this metro among the ranked metros for this business type (1 = best).
 - tier_of_city_for_business_subtype: Great, Good, Average, Below-average or Poor, from city_rank_for_business_subtype: the top 10 percent of ranked metros is Great, the next 20 percent Good, the middle 40 percent Average, the next 20 percent Below-average and the bottom 10 percent Poor.
-- total_ranked_cities_for_business_subtype: How many metros were ranked for this business type: the metros whose files carry it, less the held metros named in the file's '# Rankings withheld' line, which keep their scores and carry no rank.
+- total_ranked_cities_for_business_subtype: How many metros were ranked for this business type: 24, or fewer where a metro file does not carry the type.
 - avg_survivability_score_for_business_subtype_in_city: The projected chance, 0 to 100, that this business type lasts two or more years at a typical address in this metro. The ranking uses the good-address score, p90_survivability_score_for_business_subtype_in_city.
 - max_survivability_score_for_business_subtype_in_city: Best scored location in the metro for this business type, 0 to 100.
 - min_survivability_score_for_business_subtype_in_city: Weakest scored location in the metro for this business type, 0 to 100.
@@ -146,7 +146,7 @@ Worked example. Which city is best for a hot pot restaurant? Among the 22 metros
 - scored_locations_in_city: How many distinct scored locations the metro's figures are built from. A location is scored once per price point; it is counted once.
 - city_overall_score: The metro's overall score, 0 to 100: the mean p90_survivability_score_for_business_subtype_in_city (a good address) across the business types every metro carries. The basis of city_overall_rank; repeated on every row of the metro.
 - city_overall_avg_score: The mean avg_survivability_score_for_business_subtype_in_city (a typical address) across the same business types, 0 to 100.
-- city_overall_rank: The metro's rank among the ranked metros on city_overall_score (1 = best); ties break on city_overall_avg_score, then scored locations. Repeated on every row of the metro; empty for a held metro.
+- city_overall_rank: The metro's rank among the metros on city_overall_score (1 = best); ties break on city_overall_avg_score, then scored locations. Repeated on every row of the metro.
 - total_ranked_cities_overall: How many metros carry an overall rank.
 - business_types_in_city_overall: How many business types the overall score averages over: the types every metro carries with a good-address score, a typical-address score and a scored-location count.
 - publisher: Who publishes the dataset: StreetSpring. The same value in every row.
@@ -157,16 +157,16 @@ Worked example. Which city is best for a hot pot restaurant? Among the 22 metros
 - license_url: The license text, https://creativecommons.org/licenses/by/4.0/.
 - dataset_version: The release this row belongs to, the same value in every row and equal to the Version line of this header. Cite it to pin the numbers.
 - as_of_date: The date this release's scores were published, as YYYY-MM-DD. The same value in every row.
-- source_url_business_type: absolute and verified against the live site on 2026-10-02; filled on 63.7% of rows. Empty means the page was not proven to exist, never a guess.
+- source_url_business_type: absolute and verified against the live site on 2026-10-02; filled on 66.4% of rows. Empty means the page was not proven to exist, never a guess.
 - source_url: empty in every row. held for this release: it resolves for only about a third of rows until the place pages are built. An empty column is honest; a third-filled one is not.
 
 ## Citation
 
-StreetSpring (2026). StreetSpring Survivability Datasets 2026, version 2026.10.05. https://streetspring.com/resources/datasets. DOI 10.5281/zenodo.22287996 (all versions). CC BY 4.0.
+StreetSpring (2026). StreetSpring Survivability Datasets 2026, version 2026.10.18. https://streetspring.com/resources/datasets. DOI 10.5281/zenodo.22287996 (all versions). CC BY 4.0.
 
 ## Versions
 
-This is version 2026.10.05. The changelog is at https://streetspring.com/resources/data/CHANGELOG.md.
+This is version 2026.10.18. The changelog is at https://streetspring.com/resources/data/CHANGELOG.md.
 
 ## Contact
 
